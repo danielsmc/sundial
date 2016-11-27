@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.18.2",
+    "del": "^2.2.2",
+    "exports-loader": "^0.6.3",
+    "fulltilt": "https://github.com/adtile/Full-Tilt#0.7",
+    "geomagnetism": "^0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-inline": "^0.1.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "pump": "^1.0.1",
+    "suncalc": "^1.7.0",
+    "webpack": "^1.13.3",
+    "webpack-stream": "^3.2.0"
+  }
+}

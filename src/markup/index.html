@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Sundial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style/main.css">
+<script src="/js/main.js" async></script>
+<meta name="twitter:title" property="og:title" content="Mobile Synthetic Sundial"/>
+<meta name="twitter:description" property="og:description" content="Always know what time it is with this handy pocket sundial."/>
+<meta property="og:url" content="https://danielsmc.github.io/sundial"/>
+<meta name="twitter:card" content="summary" />
+<meta property="og:type" content="website" />
+</head>
+<body>
+<div class="prelude">
+<h1>Mobile Synthetic Sundial</h1>
+<p>Ah, the sundial. One of the oldest, simplest devices for measuring the passage of time. A triumph of human ingenuity. And yet, using a sundial can be a frustrating experience. Is it cloudy? Good luck! Are you indoors? No chance! Worst of all, the Earth itself is in the way all night.</p>
+<p>The Mobile Synthetic Sundial solves these problems by using a vast technological infrastructure&mdash;from GPS satellites to the tiny gyroscopes inside your phone&mdash;to simulate the shadow of a stick protruding from the center of your screen.</p>
+<button id="button-engage">Check it out</button>
+<p><a href="https://github.com/danielsmc/sundial">Would you like to know more?</a></p>
+</div>
+</div>
+<div class="mainevent">
+<svg id="sundial" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+	<g id="face">
+		<line id="gnomon" x1="0" y1="0" x2="0" y2="0" stroke-width="2" stroke="black"/>
+	</g>
+	<g id="shadow">
+    	<rect id="rect" x="-50%" y="-50%" width="100%" height="100%" fill="black" />
+    	<text y="-1.2em" fill="white" text-anchor="middle">
+    		<tspan x="0" dy="1.2em">You're in shadow.</tspan>
+    		<tspan x="0" dy="1.2em">Try orienting your screen towards the sun.</tspan>
+    	</text>
+    </g>
+</svg>
+<div class="message-nogyro">I can't tell which way your screen is pointing. For even more fun, try this out on a device like a phone or tablet.</div>
+<a href="https://github.com/danielsmc/sundial" class="infolink">info</a>
+</div>
+</body>
+</html>

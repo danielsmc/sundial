@@ -1,0 +1,56 @@
+body
+	margin: 0
+	border: 0
+	padding: 0
+	font-family: sans-serif
+
+.mainevent
+	display: none
+	
+.prelude
+	// text-align: center
+	margin: auto
+	max-width: 30em
+	padding: 1em
+	
+	p
+		text-align: left
+	
+.running
+	.prelude
+		display: none
+	
+	.mainevent
+		display: block
+
+.message-nogyro
+	display: none
+
+body.nogyro
+	.message-nogyro
+		display: block
+		position: absolute
+		bottom: 0
+		background: lightgray
+		text-align: center
+		width: 100%
+		padding: 1em
+		// width: 100%
+		
+#sundial
+	position: absolute
+
+.infolink
+	position: absolute
+	bottom: 0
+	
+a
+	color: black
+
+button
+	padding: 1em
+	border: 0
+	color: white
+	border-radius: 5px
+	font-size: 1em
+	background: black
