@@ -59,12 +59,27 @@ function setAttributes(el, attrs) {
   }
 }
 
+function setClass(el,this_class,toggle) {
+  const re = new RegExp("\b"+this_class+"\b");
+  if (toggle === (el.className.search(re)>=0))
+    return;
+  var classes = {};
+  el.className.split(' ').forEach(c => {
+    classes[c] = true;
+  });
+  classes[this_class] = toggle;
+  el.className = Object.keys(classes).filter(c => classes[c]).join(' ');
+}
+
 function draw(lat,lon,rot) {
   const scale = 100;
   const w = window.innerWidth;
   const h = window.innerHeight;
   const gno = matrix.colvec([0,0,1]);
   var time = new Date();
+
+  // Nogyro warning
+  setClass(document.body,'nogyro',rot[0][0]===1&&rot[1][1]===1&&rot[2][2]===1);
 
   // Resize svg
   setAttributes(
@@ -145,7 +160,7 @@ fireWhenReady(() => {
       getMat=gm;
     })
     .catch(e => {
-      document.body.className += " nogyro"
+      setClass(document.body, "nogyro", true);
       console.log("gyrofail",e);
     });
 
@@ -156,7 +171,7 @@ fireWhenReady(() => {
                   locationPromise().then(e => ({latitude:lat, longitude:lon} = e.coords))])
       .then(() => {
         rafLoop(() => draw(lat,lon,getMat()));
-        document.body.className += " running";
+        setClass(document.body, "running", true);
       }).catch(e => console.log("something went wrong", e));
     });
 
